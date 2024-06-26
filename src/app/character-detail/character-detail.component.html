@@ -1,0 +1,24 @@
+<main>
+
+    <div class="detail-box">
+        <h2>{{char.name}}</h2>
+        <div><span>Altura: </span>{{char.height}}</div>
+        <div><span>Peso: </span>{{char.mass}}</div>
+        <div><span>Cor de Cabelo: </span>{{char.hair_color}}</div>
+        <div><span>Cor da Pele: </span>{{char.skin_color}}</div>
+        <div><span>Cor do Olho: </span>{{char.eye_color}}</div>
+        <div><span>Ano de Nascimento: </span>{{char.birth_year}}</div>
+        <div><span>Planeta Natal: </span>{{ char.homeworld }}</div>
+
+        <h2>Filmes</h2>
+
+        <ul>
+            <li *ngFor="let film of films">
+                <a [routerLink]="['/film-details', film.url.split('/')[film.url.split('/').length - 2]]">
+                    {{ film.title }}
+                </a>
+                <hr>
+            </li>
+        </ul>
+    </div>
+</main>

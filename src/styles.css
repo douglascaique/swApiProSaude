@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: url('../public/background-starwars.jpg'); */
+    background-image: url('../public/background-starwars.jpg');
+    /* background-image: url('../public/background-starwars.jpg'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)); */
+    background-size: calc(70%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    
+}

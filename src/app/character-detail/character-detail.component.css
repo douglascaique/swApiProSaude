@@ -1,0 +1,28 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.detail-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(100, 100, 100, 0.8);
+    border: 2px solid black;
+    border-radius: 10px;
+
+    gap: 10px;
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+

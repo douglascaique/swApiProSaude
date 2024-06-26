@@ -1,0 +1,32 @@
+
+<main>
+  
+  <div class="detail-box">
+    <h3>Detalhes do Filme</h3>
+    <h3> Título: {{  details.title }} </h3>
+    <p> Data de Lançamento: {{ details.release_date }}</p>
+    <p> Episódio: {{ details.episode_date }}</p>    
+    <p> Diretor: {{ details.director }}</p>    
+    <p> Produtor:  {{ details.producer }}</p> 
+    
+    <h3>Personagens: </h3>
+    <p> Teste {{ characters }}</p>
+
+    <ul class="list-char">
+      
+      <li *ngFor="let character of characters">
+        <a [routerLink]="['/character-detail', character.url.split('/')[character.url.split('/').length - 2] ]" >
+          <div class="personagem">
+              <p> Nome: {{ character.name }}</p>
+          </div>
+        </a>
+        <hr>
+      </li>
+       
+    </ul>
+
+    
+  </div>
+</main>
+  
+  

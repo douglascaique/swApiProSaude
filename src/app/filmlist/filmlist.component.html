@@ -1,0 +1,15 @@
+
+<div class="container">
+
+  @for (filme of filmes; track $index) {
+    <!-- [queryParams]="{ filmId: filme.episode_id}" -->
+  <a [routerLink]="['/film-details', filme.episode_id]" >
+    <div class="filme">
+    <h3> Título: {{ filme.title }}</h3>
+    <p> Data de Lançamento: {{ filme.release_date }}</p>
+    <p> Episódio: {{ filme.episode_id }}</p>
+    </div>
+  </a>
+  }
+
+</div>
