@@ -27,7 +27,7 @@ export class FilmlistComponent {
 
   getFilmesServices(){
     this.srv.getFilmes().subscribe((data: any) => {
-      this.filmes = data.results;
+      this.filmes = data.results.sort((a: any, b: any) => a.episode_id - b.episode_id);
       console.log(this.filmes)
     })
   }

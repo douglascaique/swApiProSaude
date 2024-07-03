@@ -1,25 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    /* background-image: url('../public/background-starwars.jpg'); */
-    background-image: url('../public/background-starwars.jpg');
-    /* background-image: url('../public/background-starwars.jpg'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)); */
-    background-size: calc(70%);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: black;
 
 }
 
-.logo{
+body {
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: 20vh;
-    
+
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 1));
+    background-repeat: no-repeat;
+}
+
+.logo {
+
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
 }

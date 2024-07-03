@@ -49,13 +49,13 @@ export class StarWarsService {
     charUrl.forEach(element => {
       this.http.get(element).subscribe((response) => {
         this.chars.push(response)
-        console.log('test response', response)
+        // console.log('test response', response)
       }, (error) => {
         console.log('Failed to get characters', error)
       })
 
     });
-    console.log('Este chars', this.chars)
+    // console.log('Este chars', this.chars)
     return this.chars // => [{}, {}]
   }
   
@@ -67,12 +67,12 @@ export class StarWarsService {
     filmUrls.forEach(element => {
       this.http.get(element).subscribe((response) => {
         this.films.push(response)
-        console.log('test response', response)
+        // console.log('test response', response)
       }, (error) => {
         console.log('Failed to get characters', error)
       })
     });
-    console.log('Este chars', this.chars)
+    // console.log('Este chars', this.chars)
     return this.films // => [{}, {}]
   }
 

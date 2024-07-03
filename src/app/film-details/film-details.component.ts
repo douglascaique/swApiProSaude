@@ -34,12 +34,14 @@ export class FilmDetailsComponent {
   ngOnInit() {
     this.srv.getFilmDetails(this.filmId).subscribe(async (response) =>{
       this.details = await response;
-      this.characters = this.srv.getCharactersByList(response.characters)
+      this.characters = this.srv.getCharactersByList(response.characters.slice(0, 5))
+      console.log('Film Details', this.details)
     }, (error) => {
-      console.log('Failed to get film Details instala o zrok na sua maquina calma', error)
+      console.log('Failed to get film Details', error)
     })
-    console.log('Peguei a lista de chars', this.characters)
-    console.log('verificando chars no componente', this.characters)
+    // console.log('Peguei a lista de chars', this.characters)
+    // console.log('verificando chars no componente', this.characters)
+  }
 
     // filmId = Number(this.route.snapshot.paramMap.get('id'));
   //   await this.route.params.subscribe((params) => {
@@ -47,8 +49,6 @@ export class FilmDetailsComponent {
   //     this.getFilmDetailsServices(this.filmId);
   //   })
   //   console.log('Cheguei aqui')
-  }
-
   // ngAfterContentInit() {
 
   // }
