@@ -14,12 +14,15 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './filmlist.component.css'
 })
 
+
+
 export class FilmlistComponent {
   filmes: any[] = [];
 
   constructor(private srv: StarWarsService) {
     // console.log("Funcionando");
   }
+  
 
   ngOnInit() {
     this.getFilmesServices();
